@@ -1,0 +1,13 @@
+name: Repo Information
+
+on:
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub contaxt
+        run: echo "${{ toJSON(github) }}"
+      - name: Output end
+        run: echo "End of job run"
